@@ -1,0 +1,10 @@
+Flask==3.0.0                # For web framework (if needed)
+google-auth==2.23.0         # For Google authentication
+google-auth-oauthlib==1.1.0 # OAuth2 for authentication
+google-auth-httplib2==0.1.1 # HTTP transport for Google API
+google-api-python-client==2.108.0 # Gmail API client
+pandas==2.1.4               # For handling Excel files
+openpyxl==3.1.2             # Read/write Excel files
+requests==2.31.0            # HTTP requests
+numpy==1.26.3               # Data processing
+pickle-mixin==1.0.2         # Handling .pkl files
