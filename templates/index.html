@@ -67,35 +67,35 @@
             <a href="{{ url_for('static', filename='transactions_client_secret_2.xlsx') }}"
                 class="btn btn-success w-100">📥 Download Brandy Store Report</a>
         </div>
-
-        {% if transactions %}
-        <h3 class="mt-4 text-center">Transaction History</h3>
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered text-center">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                        <th>Amount</th>
-                        <th>In/Out</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for transaction in transactions %}
-                    <tr>
-                        <td>{{ transaction[0] }}</td>
-                        <td>{{ transaction[1] }}</td>
-                        <td>${{ transaction[2] }}</td>
-                        <td>{{ transaction[3] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        {% else %}
-        <p class="text-center text-muted mt-3">No transactions yet.</p>
-        {% endif %}
     </div>
+
+    {% if transactions %}
+    <h3 class="mt-4 text-center">Transaction History</h3>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Amount</th>
+                    <th>In/Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction[0] }}</td>
+                    <td>{{ transaction[1] }}</td>
+                    <td>${{ transaction[2] }}</td>
+                    <td>{{ transaction[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-center text-muted mt-3">No transactions yet.</p>
+    {% endif %}
 
     <div class="footer">
         <p>&copy; 2024 Transactions App. All rights reserved.</p>
